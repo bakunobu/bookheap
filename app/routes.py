@@ -14,7 +14,8 @@ def index():
     'login': 'bakunobu',
     'date': dt.datetime.now(),
     'author': 'В. Ян',
-    'title': 'Юность полководца'},
+    'title': 'Юность полководца'
+    },
 
     {
     'username': 'Sergei Vakunov',
@@ -22,6 +23,14 @@ def index():
     'date': dt.datetime.now(),
     'author': 'Р. Адамс',
     'title': 'Обитатели холмов'
+    },
+
+       {
+    'username': 'Sergei Vakunov',
+    'login': 'bakunobu',
+    'date': dt.datetime.now(),
+    'author': 'Р. Хайнлайн',
+    'title': 'Дверь в лето'
     }
   ]
     
