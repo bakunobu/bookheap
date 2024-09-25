@@ -11,41 +11,14 @@ from app.models import User
 from flask import request
 from urllib.parse import urlsplit
 
+posts = None
 
 @app.route('/')
 @app.route('/index')
 @login_required
-def index():
-  user = {'username': 'Sergei Vakunov'}
-  posts = [
-    {
-    'username': 'Sergei Vakunov',
-    'login': 'bakunobu',
-    'date': dt.datetime.now(),
-    'author': 'В. Ян',
-    'title': 'Юность полководца'
-    },
-
-    {
-    'username': 'Sergei Vakunov',
-    'login': 'bakunobu',
-    'date': dt.datetime.now(),
-    'author': 'Р. Адамс',
-    'title': 'Обитатели холмов'
-    },
-
-       {
-    'username': 'Sergei Vakunov',
-    'login': 'bakunobu',
-    'date': dt.datetime.now(),
-    'author': 'Р. Хайнлайн',
-    'title': 'Дверь в лето'
-    }
-  ]
-    
+def index():   
   return render_template('index.html',
-                         title='Home',
-                         user=user,
+                         title='Home page',
                          posts=posts)
 
 
