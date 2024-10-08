@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from config import Config
 import logging
 from logging.handlers import SMTPHandler
+from flask_mail import Mail
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -30,4 +31,5 @@ if not app.debug:
         mail_handler.setLevel(logging.ERROR)
         app.logger.addHandler(mail_handler)
 
+mail = Mail(app)
 from app import routes, models, errors
